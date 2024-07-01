@@ -1,18 +1,20 @@
-import React from 'react';
-
-const relatives = ['Amit', 'Rohit', 'Suman', 'Priya', 'Ankit'];
+import React from 'react'
 
 const RelativeList = () => {
+
+    const relatives = ["relative1", "relative2", "relative3", "relative4"];
   return (
-    <div>
-      <h2>Relatives to Visit This Diwali</h2>
-      <ol key="relativeList">
-        {relatives.map((relative, index) => (
-          <li key={`relativeListItem${index + 1}`}>{relative}</li>
+    <div id="main">
+      <ol id="relativeList" key={"relativeList"}>
+        {relatives.map((relative, i) => (
+          <li id={`relativeListItem${i + 1}`} key={`relativeListItem${i + 1}`}>
+            {relative}
+          </li>
         ))}
       </ol>
     </div>
   );
 };
+
 
 export default RelativeList;
